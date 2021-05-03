@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">PizzeriaDomMortandello</string>
+    <string name="register_pizza">Register Pizza</string>
+    <string name="menu_pizza">Menu</string>
+    <string name="image_home">Image Home</string>
+</resources>

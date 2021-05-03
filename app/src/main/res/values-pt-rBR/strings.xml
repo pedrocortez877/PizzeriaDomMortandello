@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">PizzeriaDomMortandello</string>
+    <string name="register_pizza">Cadastrar Pizza</string>
+    <string name="menu_pizza">Cardápio</string>
+    <string name="image_home">Imagem de Entrada</string>
+</resources>
