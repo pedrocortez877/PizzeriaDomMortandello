@@ -1,6 +1,11 @@
 <resources>
     <string name="app_name">PizzeriaDomMortandello</string>
-    <string name="register_pizza">Register Pizza</string>
+    <string name="register_pizza">Pizza Registers</string>
     <string name="menu_pizza">Menu</string>
     <string name="image_home">Image Home</string>
+    <string name="pizza_name">Pizza Name:</string>
+    <string name="price">Price:</string>
+    <string name="ingredients">Ingredients:</string>
+    <string name="placeholder_name">Enter the pizza name</string>
+    <string name="save">Save</string>
 </resources>

@@ -22,8 +22,10 @@
 
     <Button
         android:id="@+id/button"
-        android:layout_width="150"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="32dp"
         android:backgroundTint="@color/gray"
         android:text="@string/register_pizza"
         android:textColor="@color/black"
@@ -35,8 +37,11 @@
 
     <Button
         android:id="@+id/button2"
-        android:layout_width="150"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="32dp"
         android:layout_marginBottom="8dp"
         android:backgroundTint="@color/gray"
         android:text="@string/menu_pizza"
