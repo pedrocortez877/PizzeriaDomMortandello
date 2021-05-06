@@ -9,9 +9,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.PizzeriaDomMortandello">
-        <activity android:name=".MenuActivity"></activity>
-        <activity android:name=".RegisterPizzaActivity" />
-        <activity android:name=".MainActivity">
+        <activity android:name=".ui.activitys.MenuActivity" android:parentActivityName=".ui.activitys.MainActivity" />
+        <activity android:name=".ui.activitys.RegisterPizzaActivity" android:parentActivityName=".ui.activitys.MainActivity"/>
+        <activity android:name=".ui.activitys.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
