@@ -19,26 +19,17 @@ public class Pizza implements Parcelable {
         return name;
     }
 
-    public void setName(String name) {
-        this.name = name;
-    }
 
     public String getPrice() {
         String p = Double.toString(this.price);
         return p;
     }
 
-    public void setPrice(Double price) {
-        this.price = price;
-    }
 
     public String getIngredients() {
         return ingredients;
     }
 
-    public void setIngredients(String ingredients) {
-        this.ingredients = ingredients;
-    }
 
     protected Pizza(Parcel in) {
         name = in.readString();

@@ -8,8 +8,8 @@
 
     <ImageView
         android:id="@+id/imageView"
-        android:layout_width="287dp"
-        android:layout_height="300dp"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
         android:contentDescription="@string/image_home"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -60,25 +60,25 @@
             <EditText
                 android:id="@+id/etxtPizzaName"
                 android:layout_width="match_parent"
-                android:layout_height="63dp"
+                android:layout_height="wrap_content"
                 android:autofillHints="@string/pizza_name"
                 android:ems="10"
                 android:hint="@string/pizza_name"
                 android:inputType="textPersonName" />
 
             <EditText
-                android:id="@+id/editTextTextPersonName5"
+                android:id="@+id/etxtPizzaPrice"
                 android:layout_width="match_parent"
-                android:layout_height="57dp"
+                android:layout_height="wrap_content"
                 android:autofillHints="@string/price"
                 android:ems="10"
                 android:hint="@string/price"
                 android:inputType="textPersonName" />
 
             <EditText
-                android:id="@+id/editTextTextPersonName4"
+                android:id="@+id/etxtPizzaIngredient"
                 android:layout_width="match_parent"
-                android:layout_height="62dp"
+                android:layout_height="86dp"
                 android:autofillHints="@string/ingredients"
                 android:ems="10"
                 android:hint="@string/ingredients"

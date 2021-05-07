@@ -4,9 +4,10 @@
     <string name="register_pizza">Cadastrar Pizza</string>
     <string name="menu_pizza">Cardápio</string>
     <string name="image_home">Imagem de Entrada</string>
-    <string name="pizza_name">Nome da pizza:</string>
-    <string name="price">Preço:</string>
-    <string name="ingredients">Ingredientes:</string>
+    <string name="pizza_name">Nome da pizza</string>
+    <string name="price">Preço</string>
+    <string name="ingredients">Ingredientes</string>
     <string name="placeholder_name">Informe o nome da pizza</string>
     <string name="save">Salvar</string>
+    <string name="pizza_info">Informações da Pizza...</string>
 </resources>
