@@ -39,51 +39,48 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
 
-    <ScrollView
-        android:layout_width="0dp"
-        android:layout_height="0dp"
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="64dp"
         android:layout_marginEnd="32dp"
+        android:orientation="vertical"
         app:layout_constraintBottom_toTopOf="@+id/button3"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView">
 
-        <LinearLayout
+        <EditText
+            android:id="@+id/etxtPizzaName"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical">
+            android:autofillHints="@string/pizza_name"
+            android:ems="10"
+            android:hint="@string/pizza_name"
+            android:inputType="textPersonName" />
 
-            <EditText
-                android:id="@+id/etxtPizzaName"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:autofillHints="@string/pizza_name"
-                android:ems="10"
-                android:hint="@string/pizza_name"
-                android:inputType="textPersonName" />
+        <EditText
+            android:id="@+id/etxtPizzaPrice"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:autofillHints="@string/price"
+            android:ems="10"
+            android:hint="@string/price"
+            android:inputType="textPersonName" />
 
-            <EditText
-                android:id="@+id/etxtPizzaPrice"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:autofillHints="@string/price"
-                android:ems="10"
-                android:hint="@string/price"
-                android:inputType="textPersonName" />
-
-            <EditText
-                android:id="@+id/etxtPizzaIngredient"
-                android:layout_width="match_parent"
-                android:layout_height="86dp"
-                android:autofillHints="@string/ingredients"
-                android:ems="10"
-                android:hint="@string/ingredients"
-                android:inputType="textPersonName" />
-        </LinearLayout>
-    </ScrollView>
+        <EditText
+            android:id="@+id/etxtPizzaIngredient"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:autofillHints="@string/ingredients"
+            android:ems="10"
+            android:hint="@string/ingredients"
+            android:inputType="textPersonName" />
+    </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -20,37 +20,49 @@
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/pizzeria" />
 
-    <Button
-        android:id="@+id/btnPizzaRegister"
+    <LinearLayout
         android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="32dp"
-        android:layout_marginEnd="32dp"
-        android:backgroundTint="@color/gray"
-        android:onClick="onClickPizzaRegister"
-        android:text="@string/register_pizza"
-        android:textColor="@color/black"
-        app:layout_constraintBottom_toTopOf="@+id/btnMenu"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/imageView2">
 
-    <Button
-        android:id="@+id/btnMenu"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="32dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="32dp"
-        android:layout_marginBottom="8dp"
-        android:backgroundTint="@color/gray"
-        android:onClick="onClickMenu"
-        android:text="@string/menu_pizza"
-        android:textColor="@color/black"
-        app:layout_constraintBottom_toBottomOf="@id/imageView2"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/btnPizzaRegister" />
+        <Button
+            android:id="@+id/btnPizzaRegister"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="32dp"
+            android:layout_marginEnd="32dp"
+            android:backgroundTint="@color/orangeDark"
+            android:onClick="onClickPizzaRegister"
+            android:text="@string/register_pizza"
+            android:textColor="@color/white" />
+
+        <Button
+            android:id="@+id/btnMenu"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_marginEnd="32dp"
+            android:backgroundTint="@color/orangeDark"
+            android:onClick="onClickMenu"
+            android:text="@string/menu_pizza"
+            android:textColor="@color/white" />
+
+        <Button
+            android:id="@+id/btnPromotion"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_marginEnd="32dp"
+            android:layout_marginBottom="32dp"
+            android:backgroundTint="@color/orangeDark"
+            android:onClick="onClickMenu"
+            android:text="@string/promotions"
+            android:textColor="@color/white" />
+    </LinearLayout>
+
 </androidx.constraintlayout.widget.ConstraintLayout>

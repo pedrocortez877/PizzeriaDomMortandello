@@ -9,6 +9,7 @@ import android.view.View;
 
 import com.example.pizzeriadommortandello.R;
 import com.example.pizzeriadommortandello.data.DAOPizzasSingleton;
+import com.example.pizzeriadommortandello.data.DummyData;
 import com.example.pizzeriadommortandello.model.Pizza;
 
 import java.util.ArrayList;
@@ -21,6 +22,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        new DummyData();
     }
 
     public void onClickPizzaRegister(View view){

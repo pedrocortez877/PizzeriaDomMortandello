@@ -5,15 +5,19 @@ import android.os.Parcelable;
 
 public class Pizza implements Parcelable {
 
+    private int id;
     private String name;
     private Double price;
     private String ingredients;
 
-    public Pizza(String name, Double price, String ingredients){
+    public Pizza(int id, String name, String ingredients, Double price){
+        this.id = id;
         this.name = name;
         this.price = price;
         this.ingredients = ingredients;
     }
+
+    public int getId(){ return id; }
 
     public String getName() {
         return name;

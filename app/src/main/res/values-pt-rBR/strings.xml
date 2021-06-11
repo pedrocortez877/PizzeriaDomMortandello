@@ -10,4 +10,5 @@
     <string name="placeholder_name">Informe o nome da pizza</string>
     <string name="save">Salvar</string>
     <string name="pizza_info">Informações da Pizza...</string>
+    <string name="promotions">Promoções</string>
 </resources>

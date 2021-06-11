@@ -35,7 +35,7 @@ public class RegisterPizzaActivity extends AppCompatActivity {
             return;
         }
 
-        Pizza pizza = new Pizza(pizzaName, pizzaPrice, pizzaIngredients);
+        Pizza pizza = new Pizza(1, pizzaName, pizzaIngredients, pizzaPrice);
 
         Intent output = new Intent();
         output.putExtra(RESULT_KEY, pizza);
