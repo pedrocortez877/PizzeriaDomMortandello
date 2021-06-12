@@ -8,6 +8,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.pizzeriadommortandello.R;
 import com.example.pizzeriadommortandello.model.Pizza;
+import com.example.pizzeriadommortandello.ui.components.CustomDialog;
 import com.example.pizzeriadommortandello.ui.lists.pizzas.PizzaDataAdapter;
 
 public class PizzaDataViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
@@ -22,7 +23,7 @@ public class PizzaDataViewHolder extends RecyclerView.ViewHolder implements View
         super(itemView);
         this.txtPizzaName = itemView.findViewById(R.id.txtPizzaName);
         this.txtPizzaPrice = itemView.findViewById(R.id.txtPizzaPrice);
-        this.txtPizzaIngredients = itemView.findViewById(R.id.txtIngredient);
+        this.txtPizzaIngredients = itemView.findViewById(R.id.txtPizzaIngredient);
         itemView.setOnClickListener(this);
         txtPizzaPrice.setOnClickListener(this);
         this.adapter = adapter;
@@ -55,13 +56,19 @@ public class PizzaDataViewHolder extends RecyclerView.ViewHolder implements View
         this.txtPizzaIngredients.setVisibility(visibility);
     }
 
+    public void showPizzaInfo(Pizza pizza) {
+        CustomDialog dialog = new CustomDialog(this.adapter.getActivity(), pizza);
+        dialog.show();
+    }
+
     @Override
     public void onClick(View v) {
         if (itemView == v) {
             this.toggleDescription();
         }
         else {
-            //this.triggerEditEventListener();
+            this.showPizzaInfo(this.pizza);
         }
+
     }
 }

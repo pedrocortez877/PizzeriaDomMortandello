@@ -1,5 +1,6 @@
 package com.example.pizzeriadommortandello.ui.lists.pizzas;
 
+import android.app.Activity;
 import android.util.SparseBooleanArray;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -17,15 +18,12 @@ import java.util.ArrayList;
 public class PizzaDataAdapter extends RecyclerView.Adapter<PizzaDataViewHolder> {
 
     private ArrayList<Pizza> pizzas;
-    private OnClickEditStatusListener listener;
     private SparseBooleanArray toggleInfo;
+    private Activity activity;
 
-    public interface OnClickEditStatusListener{
-        void onClickEditPizza(Pizza pizza);
-    }
-
-    public PizzaDataAdapter(ArrayList<Pizza> pizzas){
+    public PizzaDataAdapter(ArrayList<Pizza> pizzas, Activity activity){
         this.pizzas = pizzas;
+        this.activity = activity;
         this.toggleInfo = new SparseBooleanArray();
     }
 
@@ -38,8 +36,12 @@ public class PizzaDataAdapter extends RecyclerView.Adapter<PizzaDataViewHolder> 
     }
 
     @Override
-    public void onBindViewHolder(@NonNull @org.jetbrains.annotations.NotNull PizzaDataViewHolder holder, int position) {
+    public void onBindViewHolder(@NonNull PizzaDataViewHolder holder, int position) {
         holder.bind(this.pizzas.get(position));
+    }
+
+    public Activity getActivity(){
+        return this.activity;
     }
 
     @Override
