@@ -33,7 +33,7 @@ public class CustomDialog extends Dialog implements View.OnClickListener
         ((TextView) findViewById(R.id.txtFlavor)).setText(pizza.getName());
         ((TextView) findViewById(R.id.txtIngredient)).setText(pizza.getIngredients());
         Double small = Double.parseDouble(pizza.getPrice()) * 0.75;
-        Double base = Double.parseDouble(pizza.getPrice()) * 0.75;
+        Double base = Double.parseDouble(pizza.getPrice());
         Double big = Double.parseDouble(pizza.getPrice()) * 1.25;
         ((TextView) findViewById(R.id.txtPriceP)).setText("P: " + "\nR$" + small + "  ");
         ((TextView) findViewById(R.id.txtPriceM)).setText("M: " + "\nR$" + base + "  ");

@@ -10,6 +10,8 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.PizzeriaDomMortandello">
         <activity android:name=".ui.activitys.MenuActivity" android:parentActivityName=".ui.activitys.MainActivity" />
+        <activity android:name=".ui.activitys.PromotionsActivity" android:parentActivityName=".ui.activitys.MainActivity"/>
+        <activity android:name=".ui.activitys.PromotionInfoActivity" android:parentActivityName=".ui.activitys.PromotionsActivity"/>
         <activity android:name=".ui.activitys.RegisterPizzaActivity" android:parentActivityName=".ui.activitys.MainActivity" android:windowSoftInputMode="adjustResize"/>
         <activity android:name=".ui.activitys.MainActivity">
             <intent-filter>

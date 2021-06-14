@@ -17,6 +17,29 @@ public class Pizza implements Parcelable {
         this.ingredients = ingredients;
     }
 
+    protected Pizza(Parcel in) {
+        id = in.readInt();
+        name = in.readString();
+        if (in.readByte() == 0) {
+            price = null;
+        } else {
+            price = in.readDouble();
+        }
+        ingredients = in.readString();
+    }
+
+    public static final Creator<Pizza> CREATOR = new Creator<Pizza>() {
+        @Override
+        public Pizza createFromParcel(Parcel in) {
+            return new Pizza(in);
+        }
+
+        @Override
+        public Pizza[] newArray(int size) {
+            return new Pizza[size];
+        }
+    };
+
     public int getId(){ return id; }
 
     public String getName() {
@@ -35,24 +58,6 @@ public class Pizza implements Parcelable {
     }
 
 
-    protected Pizza(Parcel in) {
-        name = in.readString();
-        price = in.readDouble();
-        ingredients = in.readString();
-    }
-
-    public static final Creator<Pizza> CREATOR = new Creator<Pizza>() {
-        @Override
-        public Pizza createFromParcel(Parcel in) {
-            return new Pizza(in);
-        }
-
-        @Override
-        public Pizza[] newArray(int size) {
-            return new Pizza[size];
-        }
-    };
-
     @Override
     public int describeContents() {
         return 0;
@@ -60,8 +65,14 @@ public class Pizza implements Parcelable {
 
     @Override
     public void writeToParcel(Parcel parcel, int i) {
+        parcel.writeInt(id);
         parcel.writeString(name);
-        parcel.writeDouble(price);
+        if (price == null) {
+            parcel.writeByte((byte) 0);
+        } else {
+            parcel.writeByte((byte) 1);
+            parcel.writeDouble(price);
+        }
         parcel.writeString(ingredients);
     }
 }

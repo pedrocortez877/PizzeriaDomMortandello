@@ -24,6 +24,7 @@ public class PizzaDataAdapter extends RecyclerView.Adapter<PizzaDataViewHolder> 
     public PizzaDataAdapter(ArrayList<Pizza> pizzas, Activity activity){
         this.pizzas = pizzas;
         this.activity = activity;
+        this.pizzas.sort((pizza1, pizza2) -> pizza1.getName().compareTo(pizza2.getName()));
         this.toggleInfo = new SparseBooleanArray();
     }
 
